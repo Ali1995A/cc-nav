@@ -1,0 +1,225 @@
+{
+  "title": "CC 导航",
+  "extras": {
+    "quick": [
+      { "title": "Piano", "icon": "🎹", "url": "https://piano.cciscc.cc/" },
+      { "title": "CC", "icon": "🧭", "url": "https://cc.cciscc.cc/" },
+      { "title": "CCISCC", "icon": "🏠", "url": "https://www.cciscc.cc/" },
+      { "title": "7C", "icon": "7️⃣", "url": "https://7c.cciscc.cc/" },
+      { "title": "LinkTime", "icon": "🔗", "url": "https://www.linktime.link/" },
+      { "title": "Poet", "icon": "🪶", "url": "https://poet.linktime.link/" },
+      { "title": "Lingo", "icon": "🗣️", "url": "https://lingo.linktime.link/" },
+      { "title": "Particle", "icon": "✨", "url": "https://particle.linktime.link/" },
+      { "title": "Solar", "icon": "☀️", "url": "https://solar.linktime.link/" },
+      { "title": "Racer", "icon": "🏁", "url": "https://racer.linktime.link/" },
+      { "title": "Solara", "icon": "🌸", "url": "https://solara.liexpress.cc/" },
+      { "title": "TV", "icon": "📺", "url": "https://tv.liexpress.me/" }
+    ]
+  },
+  "groups": [
+    {
+      "id": "work",
+      "name": "工作区 / 项目",
+      "items": [
+        {
+          "title": "MyCode 3DCC",
+          "url": "file:///D:/Soft/MyCode/3DCC",
+          "desc": "本地 3DCC 相关资料/项目",
+          "tags": ["local", "project"]
+        },
+        {
+          "title": "MyCode 3DCC-new",
+          "url": "file:///D:/Soft/MyCode/3DCC-new",
+          "desc": "本地新项目",
+          "tags": ["local", "project"]
+        }
+      ]
+    },
+    {
+      "id": "dcc",
+      "name": "DCC 工具",
+      "items": [
+        {
+          "title": "Adobe Creative Cloud",
+          "url": "https://creativecloud.adobe.com/",
+          "desc": "账号/应用/字体等入口",
+          "tags": ["adobe", "cc"]
+        },
+        {
+          "title": "Blender",
+          "url": "https://www.blender.org/",
+          "desc": "建模/动画/渲染",
+          "tags": ["dcc", "3d"]
+        },
+        {
+          "title": "SideFX Houdini",
+          "url": "https://www.sidefx.com/",
+          "desc": "程序化/特效",
+          "tags": ["fx", "houdini"]
+        },
+        {
+          "title": "Autodesk Maya",
+          "url": "https://www.autodesk.com/products/maya/overview",
+          "desc": "角色/动画/绑定",
+          "tags": ["maya", "animation"]
+        },
+        {
+          "title": "Substance 3D",
+          "url": "https://www.adobe.com/products/substance3d.html",
+          "desc": "材质/贴图工作流",
+          "tags": ["pbr", "texturing"]
+        }
+      ]
+    },
+    {
+      "id": "assets",
+      "name": "资产 / 素材",
+      "items": [
+        {
+          "title": "Poly Haven",
+          "url": "https://polyhaven.com/",
+          "desc": "HDRI/贴图/模型（免版权）",
+          "tags": ["hdri", "pbr", "free"]
+        },
+        {
+          "title": "AmbientCG",
+          "url": "https://ambientcg.com/",
+          "desc": "高质量 PBR 贴图（CC0）",
+          "tags": ["pbr", "free"]
+        },
+        {
+          "title": "Mixamo",
+          "url": "https://www.mixamo.com/",
+          "desc": "角色自动绑定/动作库",
+          "tags": ["rigging", "animation"]
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "name": "学习 / 参考",
+      "items": [
+        {
+          "title": "ArtStation",
+          "url": "https://www.artstation.com/",
+          "desc": "作品集/参考",
+          "tags": ["reference", "portfolio"]
+        },
+        {
+          "title": "80.lv",
+          "url": "https://80.lv/",
+          "desc": "行业资讯/教程",
+          "tags": ["tutorial", "news"]
+        },
+        {
+          "title": "YouTube - 3D",
+          "url": "https://www.youtube.com/results?search_query=3d+tutorial",
+          "desc": "快速找教程",
+          "tags": ["tutorial", "video"]
+        }
+      ]
+    },
+    {
+      "id": "cciscc",
+      "name": "CCISCC",
+      "items": [
+        {
+          "title": "Piano",
+          "icon": "🎹",
+          "url": "https://piano.cciscc.cc/",
+          "desc": "piano.cciscc.cc",
+          "tags": ["cciscc"]
+        },
+        {
+          "title": "CC",
+          "icon": "🧭",
+          "url": "https://cc.cciscc.cc/",
+          "desc": "cc.cciscc.cc",
+          "tags": ["cciscc"]
+        },
+        {
+          "title": "CCISCC",
+          "icon": "🏠",
+          "url": "https://www.cciscc.cc/",
+          "desc": "www.cciscc.cc",
+          "tags": ["cciscc"]
+        },
+        {
+          "title": "7C",
+          "icon": "7️⃣",
+          "url": "https://7c.cciscc.cc/",
+          "desc": "7c.cciscc.cc",
+          "tags": ["cciscc"]
+        }
+      ]
+    },
+    {
+      "id": "linktime",
+      "name": "LinkTime",
+      "items": [
+        {
+          "title": "LinkTime",
+          "icon": "🔗",
+          "url": "https://www.linktime.link/",
+          "desc": "www.linktime.link",
+          "tags": ["linktime"]
+        },
+        {
+          "title": "Poet",
+          "icon": "🪶",
+          "url": "https://poet.linktime.link/",
+          "desc": "poet.linktime.link",
+          "tags": ["linktime"]
+        },
+        {
+          "title": "Lingo",
+          "icon": "🗣️",
+          "url": "https://lingo.linktime.link/",
+          "desc": "lingo.linktime.link",
+          "tags": ["linktime"]
+        },
+        {
+          "title": "Particle",
+          "icon": "✨",
+          "url": "https://particle.linktime.link/",
+          "desc": "particle.linktime.link",
+          "tags": ["linktime"]
+        },
+        {
+          "title": "Solar",
+          "icon": "☀️",
+          "url": "https://solar.linktime.link/",
+          "desc": "solar.linktime.link",
+          "tags": ["linktime"]
+        },
+        {
+          "title": "Racer",
+          "icon": "🏁",
+          "url": "https://racer.linktime.link/",
+          "desc": "racer.linktime.link",
+          "tags": ["linktime"]
+        }
+      ]
+    },
+    {
+      "id": "liexpress",
+      "name": "LieXpress",
+      "items": [
+        {
+          "title": "Solara",
+          "icon": "🌸",
+          "url": "https://solara.liexpress.cc/",
+          "desc": "solara.liexpress.cc",
+          "tags": ["liexpress"]
+        },
+        {
+          "title": "TV",
+          "icon": "📺",
+          "url": "https://tv.liexpress.me/",
+          "desc": "tv.liexpress.me",
+          "tags": ["liexpress"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>CC 导航</title>
+    <meta name="description" content="CC 专属导航页（本地可用）" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand__title">CC 导航</div>
+        <div class="brand__sub">粉色卡通 · iPad 友好 · 支持扩展区（编辑 links.json）</div>
+      </div>
+
+      <div class="actions">
+        <label class="search" aria-label="搜索链接">
+          <span class="search__icon" aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="搜索（按 / 快捷聚焦）" autocomplete="off" />
+          <button id="clearSearch" class="icon-btn" type="button" aria-label="清空搜索" title="清空（Esc）">×</button>
+        </label>
+
+        <a class="ghost-btn" href="./links.json" title="编辑 links.json">links.json</a>
+
+        <button id="themeToggle" class="ghost-btn" type="button" title="切换主题">主题</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="layout">
+        <section class="main">
+          <div id="status" class="status" role="status" aria-live="polite"></div>
+          <div id="quickBar" class="quickBar" aria-label="快捷按钮"></div>
+          <div id="groups" class="groups" aria-label="链接分组"></div>
+        </section>
+
+        <aside class="extras" aria-label="扩展区">
+          <div class="extras__block">
+            <div class="extras__title">扩展区</div>
+            <div class="extras__text">预留给：今日待办、常用快捷入口、公告、天气等（可在 links.json 添加 extras 字段）。</div>
+          </div>
+          <div id="extras"></div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__hint">快捷键：<kbd>/</kbd> 搜索 · <kbd>Esc</kbd> 清空 · 点击分组标题折叠/展开（自动记忆）</div>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
