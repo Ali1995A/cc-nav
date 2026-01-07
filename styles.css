@@ -326,27 +326,11 @@ body {
 
 .footer__quick {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
   margin: 0 0 10px;
 }
 
-.footer__btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  border: var(--outline) solid var(--border);
-  background: var(--panel);
-  color: var(--text);
-  padding: 8px 10px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.footer__btn:hover {
-  background: var(--panel-2);
+.footer__grid {
+  width: 100%;
 }
 
 kbd {
