@@ -14,6 +14,8 @@
     { "title": "Solara", "icon": "🌸", "url": "https://solara.liexpress.cc/" },
     { "title": "TV", "icon": "📺", "url": "https://tv.liexpress.me/" },
     { "title": "Games to Learn English", "icon": "🎮", "url": "https://www.gamestolearnenglish.com/" },
-    { "title": "Knoword (Junior)", "icon": "🧠", "url": "https://knoword.com/play?difficulty=junior" }
+    { "title": "Knoword (Junior)", "icon": "🧠", "url": "https://knoword.com/play?difficulty=junior" },
+    { "title": "Jump", "icon": "J", "url": "https://jump.cciscc.cc" },
+    { "title": "Face", "icon": "F", "url": "https://face.cciscc.cc" }
   ]
 }

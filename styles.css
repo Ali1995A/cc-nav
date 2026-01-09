@@ -341,8 +341,6 @@ body {
 
 .footer__grid {
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 240px));
-  justify-content: start;
 }
 
 kbd {
