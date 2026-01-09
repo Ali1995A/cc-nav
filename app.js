@@ -22,7 +22,7 @@ function normalize(text) {
 function getPreferredTheme() {
   const saved = localStorage.getItem(STORAGE.theme);
   if (saved === "light" || saved === "dark") return saved;
-  return window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  return "light";
 }
 
 function applyTheme(theme) {
