@@ -18,6 +18,7 @@
     { "title": "Jump", "icon": "J", "url": "https://jump.cciscc.cc" },
     { "title": "Happy 嗨皮", "icon": "F", "url": "https://face.cciscc.cc" },
     { "title": "PBS Kids", "icon": "P", "url": "https://pbskids.org/" },
-    { "title": "Poki Kids", "icon": "K", "url": "https://kids.poki.com/" }
+    { "title": "Poki Kids", "icon": "K", "url": "https://kids.poki.com/" },
+    { "title": "Chicken", "icon": "🐔", "url": "https://chicken.linktime.link" }
   ]
 }
