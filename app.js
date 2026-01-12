@@ -9,6 +9,24 @@ const searchInput = document.getElementById("searchInput");
 const clearSearchBtn = document.getElementById("clearSearch");
 const themeToggle = document.getElementById("themeToggle");
 
+function removeInjectedRotateTip() {
+  const target = "请横屏使用";
+  if (!document.body || !document.body.textContent?.includes(target)) return;
+
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const hits = [];
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (node?.nodeValue && node.nodeValue.includes(target)) hits.push(node);
+  }
+
+  for (const node of hits) {
+    const el = node.parentElement;
+    if (el && el.childNodes.length === 1 && el.textContent?.trim() === target) el.remove();
+    else node.nodeValue = node.nodeValue.replaceAll(target, "");
+  }
+}
+
 function setStatus(text) {
   statusEl.textContent = text || "";
 }
@@ -171,6 +189,8 @@ function getQueryParam() {
 }
 
 (async () => {
+  removeInjectedRotateTip();
+
   applyTheme(getPreferredTheme());
   themeToggle.addEventListener("click", () => {
     const next = (document.documentElement.dataset.theme || "dark") === "dark" ? "light" : "dark";
