@@ -19,6 +19,7 @@
     { "title": "Happy 嗨皮", "icon": "F", "url": "https://face.cciscc.cc" },
     { "title": "PBS Kids", "icon": "P", "url": "https://pbskids.org/" },
     { "title": "Poki Kids", "icon": "K", "url": "https://kids.poki.com/" },
-    { "title": "Chicken", "icon": "🐔", "url": "https://chicken.linktime.link" }
+    { "title": "Chicken", "icon": "🐔", "url": "https://chicken.linktime.link" },
+    { "title": "Number", "icon": "N", "url": "https://number.cciscc.cc/" }
   ]
 }
