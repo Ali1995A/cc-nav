@@ -21,6 +21,7 @@
     { "title": "Poki Kids", "icon": "K", "url": "https://kids.poki.com/" },
     { "title": "Chicken", "icon": "🐔", "url": "https://chicken.linktime.link" },
     { "title": "Number", "icon": "N", "url": "https://number.cciscc.cc/" },
-    { "title": "Pintu", "icon": "🧩", "url": "https://pintu.cciscc.cc/" }
+    { "title": "Pintu", "icon": "🧩", "url": "https://pintu.cciscc.cc/" },
+    { "title": "Sudoku", "icon": "🔢", "url": "https://sudoku.cciscc.cc/" }
   ]
 }
