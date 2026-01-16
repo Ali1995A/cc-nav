@@ -2,6 +2,7 @@
   "title": "CC 导航",
   "items": [
     { "title": "Piano", "icon": "🎹", "url": "https://piano.cciscc.cc/" },
+    { "title": "Pintu", "icon": "🧩", "url": "https://pintu.cciscc.cc/" },
     { "title": "CC", "icon": "🧭", "url": "https://cc.cciscc.cc/" },
     { "title": "CCISCC", "icon": "🏠", "url": "https://www.cciscc.cc/" },
     { "title": "7C", "icon": "7️⃣", "url": "https://7c.cciscc.cc/" },
