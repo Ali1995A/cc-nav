@@ -22,6 +22,7 @@
     { "title": "Chicken", "icon": "🐔", "url": "https://chicken.linktime.link" },
     { "title": "Number", "icon": "N", "url": "https://number.cciscc.cc/" },
     { "title": "Pintu", "icon": "🧩", "url": "https://pintu.cciscc.cc/" },
-    { "title": "Sudoku", "icon": "🔢", "url": "https://sudoku.cciscc.cc/" }
+    { "title": "Sudoku", "icon": "🔢", "url": "https://sudoku.cciscc.cc/" },
+    { "title": "Migong", "icon": "🌀", "url": "https://migong.cciscc.cc/" }
   ]
 }
