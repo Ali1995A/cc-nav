@@ -25,6 +25,7 @@
     { "title": "Sudoku", "icon": "🔢", "url": "https://sudoku.cciscc.cc/" },
     { "title": "Migong", "icon": "🌀", "url": "https://migong.cciscc.cc/" },
     { "title": "Huarongdao", "icon": "🧱", "url": "https://huarongdao.cciscc.cc/" },
-    { "title": "Large", "icon": "🧩", "url": "https://large.cciscc.cc/" }
+    { "title": "Large", "icon": "🧩", "url": "https://large.cciscc.cc/" },
+    { "title": "Story", "icon": "📖", "url": "https://story.cciscc.cc/" }
   ]
 }
