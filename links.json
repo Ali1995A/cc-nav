@@ -26,6 +26,7 @@
     { "title": "Migong", "icon": "🌀", "url": "https://migong.cciscc.cc/" },
     { "title": "Huarongdao", "icon": "🧱", "url": "https://huarongdao.cciscc.cc/" },
     { "title": "Large", "icon": "🧩", "url": "https://large.cciscc.cc/" },
-    { "title": "Story", "icon": "📖", "url": "https://story.cciscc.cc/" }
+    { "title": "Story", "icon": "📖", "url": "https://story.cciscc.cc/" },
+    { "title": "Art", "icon": "🎨", "url": "https://art.cciscc.cc/" }
   ]
 }
