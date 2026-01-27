@@ -27,6 +27,7 @@
     { "title": "Huarongdao", "icon": "🧱", "url": "https://huarongdao.cciscc.cc/" },
     { "title": "Large", "icon": "🧩", "url": "https://large.cciscc.cc/" },
     { "title": "Story", "icon": "📖", "url": "https://story.cciscc.cc/" },
-    { "title": "Art", "icon": "🎨", "url": "https://art.cciscc.cc/" }
+    { "title": "Art", "icon": "🎨", "url": "https://art.cciscc.cc/" },
+    { "title": "Hanzi", "icon": "汉", "url": "https://hanzi.cciscc.cc/" }
   ]
 }
