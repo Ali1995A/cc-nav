@@ -29,6 +29,7 @@
     { "title": "Story", "icon": "📖", "url": "https://story.cciscc.cc/" },
     { "title": "Art", "icon": "🎨", "url": "https://art.cciscc.cc/" },
     { "title": "Hanzi", "icon": "汉", "url": "https://hanzi.cciscc.cc/" },
-    { "title": "Literacy", "icon": "📚", "url": "https://literacy.cciscc.cc/" }
+    { "title": "Literacy", "icon": "📚", "url": "https://literacy.cciscc.cc/" },
+    { "title": "Moerduo", "icon": "👂", "url": "https://moerduo.linktime.link/" }
   ]
 }
