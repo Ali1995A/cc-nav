@@ -110,16 +110,29 @@ function makeEl(tag, attrs = {}, children = []) {
   return el;
 }
 
+function getPos(item) {
+  const pos = item?.pos;
+  if (!Array.isArray(pos) || pos.length < 2) return null;
+
+  const row = Number(pos[0]);
+  const col = Number(pos[1]);
+  if (!Number.isInteger(row) || !Number.isInteger(col) || row < 1 || col < 1) return null;
+  return { row, col };
+}
+
 function render({ title, items }, query) {
   document.title = title ? `${title}` : "CC 导航";
   const q = normalize(query);
 
   const all = Array.isArray(items) ? items : [];
   const shown = q ? all.filter((it) => toTextForSearch(it).includes(q)) : all;
+  const useMatrixLayout = !q && window.matchMedia("(min-width: 561px)").matches;
 
   gridEl.replaceChildren();
   for (const item of shown) {
-    const meta = formatHost(item.url);
+    const host = formatHost(item.url);
+    const pos = getPos(item);
+    const meta = [pos ? `(${pos.row},${pos.col})` : "", host].filter(Boolean).join(" · ");
     const titleRow = makeEl("div", { class: "card__top" }, [
       makeEl("div", { class: "card__title", text: item.title || "未命名" }),
       makeEl("div", { class: "card__meta", text: meta }),
@@ -151,6 +164,17 @@ function render({ title, items }, query) {
       },
       cardChildren,
     );
+
+    if (useMatrixLayout && pos) {
+      a.style.gridRowStart = String(pos.row);
+      a.style.gridColumnStart = String(pos.col);
+      a.dataset.pos = `${pos.row},${pos.col}`;
+    } else {
+      a.dataset.pos = "";
+      a.style.removeProperty("grid-row-start");
+      a.style.removeProperty("grid-column-start");
+    }
+
     gridEl.append(a);
   }
 

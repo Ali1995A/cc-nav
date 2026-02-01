@@ -12,6 +12,7 @@
 编辑：`links.json`
 
 - `items[]`：链接项（`title` / `url` / `icon`）
+- 可选 `pos: [row, col]`：在大屏（≥ 561px）下按「行/列」固定位置（例如 `[1, 2]` 表示第 1 行第 2 列）
 
 本地路径示例（Windows）：
 
