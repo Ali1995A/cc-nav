@@ -24,10 +24,11 @@
     { "title": "100 Million Dots", "icon": "🔴", "url": "https://meritt.me/100-million-dots", "pos": [5, 1] },
     { "title": "Dots (BrainBashers)", "icon": "🔵", "url": "https://www.brainbashers.com/dots.asp" },
     { "title": "Large", "icon": "🧩", "url": "https://large.cciscc.cc/", "pos": [5, 4] },
+    { "title": "seeworld", "icon": "🗺️", "url": "https://maps.linktime.link/", "pos": [3, 3] },
     { "title": "Story", "icon": "📖", "url": "https://story.cciscc.cc/" },
-    { "title": "Art", "icon": "🎨", "url": "https://art.cciscc.cc/" },
+    { "title": "Art", "icon": "🎨", "url": "https://art.cciscc.cc/", "pos": [8, 2] },
     { "title": "Hanzi", "icon": "汉", "url": "https://hanzi.cciscc.cc/", "pos": [2, 3] },
-    { "title": "Literacy", "icon": "📚", "url": "https://literacy.cciscc.cc/", "pos": [3, 3] },
+    { "title": "Literacy", "icon": "📚", "url": "https://literacy.cciscc.cc/", "pos": [8, 1] },
     { "title": "Moerduo", "icon": "👂", "url": "https://moerduo.linktime.link/", "pos": [7, 1] },
     { "title": "Pinecone", "icon": "🌲", "url": "https://pinecone.linktime.link/", "pos": [7, 4] }
   ]
