@@ -31,7 +31,7 @@
     { "title": "i2v", "icon": "🎬", "url": "https://i2v.linktime.link/", "pos": [8, 4] },
     { "title": "Tetris", "icon": "🧩", "url": "https://tetris.linktime.link/" },
     { "title": "Face", "icon": "🙂", "url": "https://face.linktime.link/" },
-    { "title": "SelfFace", "icon": "🙂", "url": "https://selfface.linktime.link/" },
+    { "title": "SelfFace", "icon": "✌️", "url": "https://selfface.linktime.link/" },
     { "title": "Hanzi", "icon": "汉", "url": "https://hanzi.cciscc.cc/", "pos": [2, 3] },
     { "title": "Literacy", "icon": "📚", "url": "https://literacy.cciscc.cc/", "pos": [8, 1] },
     { "title": "Moerduo", "icon": "👂", "url": "https://moerduo.linktime.link/", "pos": [7, 1] },
