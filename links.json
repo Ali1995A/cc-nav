@@ -35,6 +35,7 @@
     { "title": "Hanzi", "icon": "汉", "url": "https://hanzi.cciscc.cc/", "pos": [2, 3] },
     { "title": "Literacy", "icon": "📚", "url": "https://literacy.cciscc.cc/", "pos": [8, 1] },
     { "title": "Moerduo", "icon": "👂", "url": "https://moerduo.linktime.link/", "pos": [7, 1] },
-    { "title": "Pinecone", "icon": "🌲", "url": "https://pinecone.linktime.link/", "pos": [7, 4] }
+    { "title": "Pinecone", "icon": "🌲", "url": "https://pinecone.linktime.link/", "pos": [7, 4] },
+    { "title": "Teramind", "icon": "🔗", "url": "https://mul.teramind.cc" }
   ]
 }
