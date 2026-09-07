@@ -31,6 +31,15 @@
   --shadow-soft: 0 10px 26px rgba(255, 46, 134, 0.12);
 }
 
+@font-face {
+  font-family: "CC Pinyin";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/cc-pinyin.woff2") format("woff2");
+  unicode-range: U+0020-007E, U+00A0, U+0251, U+0300-0301, U+0304, U+0308, U+030C;
+}
+
 html[data-theme="light"] {
   /* Pink stays pink :) */
 }
@@ -209,12 +218,12 @@ body {
 .grid {
   display: grid;
   gap: 14px;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 @media (min-width: 561px) {
   .grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-auto-flow: row dense;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -240,7 +249,7 @@ body {
 
 .card:hover {
   border-color: var(--hover-border);
-  background: linear-gradient(0deg, var(--hover-bg), var(--hover-bg)), rgba(255, 255, 255, 0.76);
+  background: linear-gradient(0deg, var(--hover-bg), var(--hover-bg)), var(--card-bg);
 }
 
 .card:active {
@@ -315,6 +324,23 @@ body {
   line-height: 1.4;
 }
 
+.pinyin-text {
+  font-family: "CC Pinyin", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Arial, "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+}
+
+.card__pinyin {
+  font-size: 14px;
+  line-height: 1.25;
+  opacity: 0.86;
+  letter-spacing: 0.01em;
+  word-spacing: 0.08em;
+}
+
 .tags {
   display: flex;
   gap: 6px;
@@ -357,6 +383,26 @@ kbd {
   border-bottom-width: 2px;
   border-radius: 7px;
   padding: 2px 6px;
+}
+
+.categories { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.category-btn { font: inherit; font-size: 13px; padding: 11px 16px; min-height: 44px; border-radius: 24px; border: 1px solid var(--border); background: var(--panel); color: var(--text); cursor: pointer; }
+.category-btn[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.category-section { margin-bottom: 20px; }
+.category-section h2 { font-size: 21px; letter-spacing: 0.04em; margin: 8px 0 16px; padding-left: 12px; border-left: 4px solid var(--accent); }
+.category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px; }
+.card__top { flex-direction: column; align-items: flex-start; gap: 7px; }
+.card__title { white-space: normal; overflow-wrap: anywhere; }
+.card__meta { max-width: 100%; }
+.search { min-width: 0; width: min(400px, 100%); }
+.search input { min-width: 0; width: 100%; }
+.actions { min-width: 0; }
+:is(a, button, input):focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.search:focus-within { border-color: var(--accent); }
+@media (max-width: 760px) {
+  .topbar { flex-direction: column; gap: 12px; }
+  .actions { flex-wrap: nowrap; justify-content: flex-start; }
+  .search { flex: 1; width: auto; }
 }
 
 @media (pointer: coarse) {

@@ -1,5 +1,15 @@
 {
   "title": "CC 导航",
+  "groups": [
+    { "title": "中文与阅读", "items": ["Poet", "Story", "Hanzi", "Literacy"] },
+    { "title": "英语与听说", "items": ["LinkTime", "Games to Learn English", "Knoword (Junior)", "Moerduo", "Pinecone", "幼儿英语口语"] },
+    { "title": "数学与数量", "items": ["Number", "Large", "Number (LinkTime)", "Teramind", "100 Million Dots", "Dots (BrainBashers)"] },
+    { "title": "科学与世界", "items": ["Solar", "Scale", "seeworld"] },
+    { "title": "音乐与创作", "items": ["Piano", "Art", "i2v", "Particle", "7C", "Happy 嗨皮", "Face", "SelfFace", "萌粒工坊"] },
+    { "title": "影音时光", "items": ["小小放映室"] },
+    { "title": "益智与游戏", "items": ["Pintu", "Sudoku", "Migong", "Huarongdao", "Tetris", "Racer", "Chicken", "Poki Kids"] },
+    { "title": "其他探索", "items": ["CCISCC", "Jump"] }
+  ],
   "items": [
     { "title": "Piano", "icon": "🎹", "url": "https://piano.cciscc.cc/" },
     { "title": "CCISCC", "icon": "🏠", "url": "https://www.cciscc.cc/" },
@@ -36,6 +46,9 @@
     { "title": "Literacy", "icon": "📚", "url": "https://literacy.cciscc.cc/", "pos": [8, 1] },
     { "title": "Moerduo", "icon": "👂", "url": "https://moerduo.linktime.link/", "pos": [7, 1] },
     { "title": "Pinecone", "icon": "🌲", "url": "https://pinecone.linktime.link/", "pos": [7, 4] },
-    { "title": "Teramind", "icon": "🔗", "url": "https://mul.teramind.cc" }
+    { "title": "Teramind", "icon": "✖️", "url": "https://mul.teramind.cc/", "desc": "乘法小乐园 · 一年级乘法启蒙" },
+    { "title": "小小放映室", "icon": "🎬", "url": "https://video.digstory.cc/", "desc": "家庭视频播放器" },
+    { "title": "萌粒工坊", "icon": "🎨", "url": "https://sticker.idigits.app/", "desc": "IP Sticker Studio" },
+    { "title": "幼儿英语口语", "icon": "💬", "url": "https://earlyenglish.linktime.link/", "desc": "3–6 岁幼儿英语口语教程" }
   ]
 }

@@ -4,15 +4,16 @@
 
 ## 使用
 
-- 直接打开：`index.html`
-- 或在 PowerShell 里：`Start-Process .\\index.html`
+- 使用已有 Python 启动静态服务：`python -m http.server 8000`，浏览器访问 `http://localhost:8000`。
+- 页面使用模块脚本和 fetch，请通过 HTTP 访问，不要直接双击 HTML。
 
 ## 配置链接
 
 编辑：`links.json`
 
 - `items[]`：链接项（`title` / `url` / `icon`）
-- 可选 `pos: [row, col]`：在大屏（≥ 561px）下按「行/列」固定位置（例如 `[1, 2]` 表示第 1 行第 2 列）
+- `groups[]` 定义分类名称及成员标题；标题应唯一，改名时同步更新分类。未列入分组的链接自动进入“其他探索”。历史 `pos` 数据保留，但新版不再使用固定坐标。
+- 可选 `pinyin`：拼音显示（渲染前会做规范化：`a/ā/á/ǎ/à` → `ɑ/ɑ̄/ɑ́/ɑ̌/ɑ̀`），并使用站点内置字体保证跨设备一致
 
 本地路径示例（Windows）：
 

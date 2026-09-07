@@ -8,6 +8,7 @@ const statusEl = document.getElementById("status");
 const searchInput = document.getElementById("searchInput");
 const clearSearchBtn = document.getElementById("clearSearch");
 const themeToggle = document.getElementById("themeToggle");
+let activeCategory = "全部";
 
 function removeInjectedRotateTip() {
   const target = "请横屏使用";
@@ -38,14 +39,15 @@ function normalize(text) {
 }
 
 function getPreferredTheme() {
-  const saved = localStorage.getItem(STORAGE.theme);
+  let saved;
+  try { saved = localStorage.getItem(STORAGE.theme); } catch {}
   if (saved === "light" || saved === "dark") return saved;
   return "light";
 }
 
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
-  localStorage.setItem(STORAGE.theme, theme);
+  try { localStorage.setItem(STORAGE.theme, theme); } catch {}
   themeToggle.textContent = theme === "light" ? "浅色" : "深色";
 }
 
@@ -110,6 +112,14 @@ function makeEl(tag, attrs = {}, children = []) {
   return el;
 }
 
+function normalizePinyin(raw) {
+  const s = String(raw || "").trim();
+  if (!s) return "";
+
+  // Use NFD so tone marks are combining characters. Then force "a" -> "ɑ" (open a, U+0251).
+  return s.normalize("NFD").replaceAll("a", "ɑ");
+}
+
 function getPos(item) {
   const pos = item?.pos;
   if (!Array.isArray(pos) || pos.length < 2) return null;
@@ -120,25 +130,46 @@ function getPos(item) {
   return { row, col };
 }
 
-function render({ title, items }, query) {
+function render({ title, items, groups = [] }, query) {
   document.title = title ? `${title}` : "CC 导航";
   const q = normalize(query);
 
-  const all = Array.isArray(items) ? items : [];
-  const shown = q ? all.filter((it) => toTextForSearch(it).includes(q)) : all;
-  const useMatrixLayout = !q && window.matchMedia("(min-width: 561px)").matches;
+  const all = (Array.isArray(items) ? items : []).filter(it => it && typeof it.url === "string" && /^https?:\/\//i.test(it.url));
+  const categoryFor = it => groups.find(g => g.items.includes(it.title))?.title || "其他探索";
+  const shown = all.filter(it => (activeCategory === "全部" || categoryFor(it) === activeCategory) && (!q || normalize(toTextForSearch(it) + " " + categoryFor(it)).includes(q)));
+  const categories = [...new Set([...groups.map(g => g.title), ...all.map(categoryFor)])];
+  const nav = document.getElementById("categories");
+  nav.replaceChildren();
+  for (const name of ["全部", ...categories]) {
+    const count = all.filter(it => name === "全部" || categoryFor(it) === name).length;
+    const button = makeEl("button", { type: "button", class: "category-btn", "aria-pressed": String(name === activeCategory), text: `${name} · ${count}` });
+    button.addEventListener("click", () => {
+      activeCategory = name;
+      render({ title, items, groups }, searchInput.value);
+      [...nav.children].find(el => el.textContent === button.textContent)?.focus();
+    });
+    nav.append(button);
+  }
 
   gridEl.replaceChildren();
+  const sections = new Map();
+  for (const name of categories) {
+    const count = shown.filter(it => categoryFor(it) === name).length;
+    if (!count) continue;
+    const cards = makeEl("div", { class: "category-grid" });
+    gridEl.append(makeEl("section", { class: "category-section", "aria-label": name }, [makeEl("h2", { text: `${name} · ${count}` }), cards]));
+    sections.set(name, cards);
+  }
   for (const item of shown) {
     const host = formatHost(item.url);
-    const pos = getPos(item);
-    const meta = [pos ? `(${pos.row},${pos.col})` : "", host].filter(Boolean).join(" · ");
+    const meta = host;
     const titleRow = makeEl("div", { class: "card__top" }, [
       makeEl("div", { class: "card__title", text: item.title || "未命名" }),
       makeEl("div", { class: "card__meta", text: meta }),
     ]);
 
     const desc = item.desc ? makeEl("div", { class: "card__desc", text: item.desc }) : null;
+    const pinyin = item.pinyin ? makeEl("div", { class: "card__pinyin pinyin-text", text: normalizePinyin(item.pinyin) }) : null;
     const tags = Array.isArray(item.tags) && item.tags.length
       ? makeEl(
           "div",
@@ -148,6 +179,7 @@ function render({ title, items }, query) {
       : null;
 
     const infoChildren = [titleRow];
+    if (pinyin) infoChildren.push(pinyin);
     if (desc) infoChildren.push(desc);
     if (tags) infoChildren.push(tags);
 
@@ -165,21 +197,11 @@ function render({ title, items }, query) {
       cardChildren,
     );
 
-    if (useMatrixLayout && pos) {
-      a.style.gridRowStart = String(pos.row);
-      a.style.gridColumnStart = String(pos.col);
-      a.dataset.pos = `${pos.row},${pos.col}`;
-    } else {
-      a.dataset.pos = "";
-      a.style.removeProperty("grid-row-start");
-      a.style.removeProperty("grid-column-start");
-    }
-
-    gridEl.append(a);
+    sections.get(categoryFor(item)).append(a);
   }
 
   if (q) setStatus(shown.length ? `“${query}”：共 ${shown.length} 条结果` : `“${query}”：未找到匹配项`);
-  else setStatus(`共 ${all.length} 个链接`);
+  else setStatus(`${activeCategory} · 共 ${shown.length} 个链接`);
 }
 
 async function loadData() {
